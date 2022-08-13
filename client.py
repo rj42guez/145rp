@@ -7,11 +7,11 @@ def encodeMessage(m):
     M = m.encode('utf-8')
     return M
 
-iM = '6d93e9310000000080000000000000000000'
+iM = '6d93e931XXXXXXXX80000000000000000000'
 iD = '6d93e931'
 portS = 6734
 portR = 9000
-ipR = 0
+ipR = '10.0.5.69'
 path = ''
 
 udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -19,26 +19,27 @@ udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 args = sys.argv
 
 for i in range(len(args)):
-	if args[i] == '-a':
+	if args[i] == '-a' and args[i+1] == '10.0.5.69':
 		ipR = args[i+1]
 		print(ipR, '\n') 
-	if args[i] == '-s':
+	if args[i] == '-s' and args[i+1] == '9000':
 		portR = int(args[i+1])
 		print(portR, '\n') 
-	if args[i] == '-c':
+	if args[i] == '-c' and args[i+1] == '6734':
 		portS = int(args[i+1])
 		print(portS, '\n')
-	if args[i] == '-i':
+	if args[i] == '-i' and args[i+1] == '6d93e931':
 		iD = args[i+1] 
 		print(iD, '\n')
 
 M = encodeMessage(iM)
 udpSocket.bind(('', portS))
-udpsocket.settimeout(0.5)
+udpSocket.settimeout(0.5)
 
 udpSocket.sendto(M, (ipR, portR))
 
 data, addr = udpSocket.recvfrom(1024)
+transID = ''
 
 if len(data) > 0:
 	print(addr,'\n')
@@ -46,4 +47,4 @@ if len(data) > 0:
 
 print("Transaction Number: ", transID)
 
-break
+exit()
