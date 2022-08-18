@@ -10,7 +10,6 @@ iD = '6d93e931'
 portS = 6734
 portR = 9000
 ipR = '10.0.5.69'
-path = ''
 
 udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
