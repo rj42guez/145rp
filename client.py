@@ -5,7 +5,7 @@ def encodeMessage(m):
     M = m.encode('utf-8')
     return M
 
-iM = '6d93e931XXXXXXxx80000000000000000000'
+iM = '6d93e9311010101080000000000000000000'
 iD = '6d93e931'
 portS = 6734
 portR = 9000
