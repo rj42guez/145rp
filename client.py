@@ -1,5 +1,6 @@
 import socket
 import argparse
+import time
 
 def encodeMessage(m):
     M = m.encode('utf-8')
@@ -12,8 +13,8 @@ parser.add_argument('-c', type=int, default=6734)
 parser.add_argument('-i', type=str, default="6d93e931")
 
 args = parser.parse_args()
-  
-iM = '6d93e9311010101080000000000000000000'
+
+iM = '6d93e9319999999980000000000000000000'
 iD = args.i
 portS = args.c
 portR = args.s
@@ -35,5 +36,9 @@ if len(data) > 0:
 	transID = data.decode()
 
 print("Transaction Number: ", transID)
+
+print("Please wait until 120 seconds have passed.")
+time.sleep(120)
+print("Goodbye.")
 
 exit()
