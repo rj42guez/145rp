@@ -14,11 +14,22 @@ parser.add_argument('-i', type=str, default="6d93e931")
 
 args = parser.parse_args()
 
-iM = '6d93e9319999999980000000000000000000'
 iD = args.i
-portS = args.c
-portR = args.s
+portS = int(args.c)
+portR = int(args.s)
 ipR = args.a
+
+student_id = iD
+transaction_id = '99999999'
+ty = '8'
+pull_byte = '00000'
+pull_size = '00000'
+uin = '0000000'
+uin_ans = '0'
+sep = '/'
+data = '0'
+
+iM = '{}{}{}{}{}{}{}{}{}'.format(student_id, transaction_id, ty, pull_byte, pull_size, uin, uin_ans, sep, data)
 
 udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
