@@ -41,11 +41,8 @@ udpSocket.settimeout(0.5)
 udpSocket.sendto(M, (ipR, portR))
 
 data, addr = udpSocket.recvfrom(1024)
-transID = ''
 
-if len(data) > 0:
-	print(addr,'\n')
-	transID = data.decode()
+transID = data.decode()
 
 print("Transaction Number: ", transID)
 
