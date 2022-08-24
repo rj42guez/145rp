@@ -30,6 +30,7 @@ sep = '/'
 data = '0'
 
 iM = '{}{}{}{}{}{}{}{}{}'.format(student_id, transaction_id, ty, pull_byte, pull_size, uin, uin_ans, sep, data)
+print(iM,"\n")
 
 udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
