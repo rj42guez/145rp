@@ -3,7 +3,7 @@ import argparse
 import time
 
 def encodeMessage(m):
-    M = m.encode('utf-8')
+    M = m.encode()
     return M
 
 parser = argparse.ArgumentParser()
