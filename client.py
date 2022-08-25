@@ -37,10 +37,10 @@ print("Initiate Packet: ", iP)          # The initiate packet is printed as outp
 
 udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # A UDP connection is set up.
 
-M = encodeContent(iP)                   # iP is encoded via encodeContent(); the resulting value is stored in the variable M
+P = encodeContent(iP)                   # iP is encoded via encodeContent(); the resulting value is stored in the variable M
 udpSocket.bind(('', portS))             # The program listens from the sender port.
 
-udpSocket.sendto(M, (ipR, portR))       # The initiate packet is sent to the receiver.
+udpSocket.sendto(P, (ipR, portR))       # The initiate packet is sent to the receiver.
 
 data, addr = udpSocket.recvfrom(1024)   # The program aims to receive from the server.
 
