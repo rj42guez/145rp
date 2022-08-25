@@ -44,7 +44,7 @@ udpSocket.sendto(P, (ipR, portR))       # The initiate packet is sent to the rec
 
 data, addr = udpSocket.recvfrom(1024)   # The program tries to receive from the server.
 
-transID = data.decode()                 # The transaction number is gotten via decode() and stored in the variable transID.
+transID = data.decode()                 # The program decodes 'data' via decode() and stores the value in the variable transID.
 
 print("Transaction Number: ", transID)  # The transaction number is printed as output.
 
