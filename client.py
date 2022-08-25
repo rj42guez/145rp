@@ -42,7 +42,7 @@ udpSocket.bind(('', portS))             # The program listens from the sender po
 
 udpSocket.sendto(P, (ipR, portR))       # The initiate packet is sent to the receiver.
 
-data, addr = udpSocket.recvfrom(1024)   # The program aims to receive from the server.
+data, addr = udpSocket.recvfrom(1024)   # The program tries to receive from the server.
 
 transID = data.decode()                 # The transaction number is gotten via decode() and stored in the variable transID.
 
