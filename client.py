@@ -1,11 +1,14 @@
+#Modules socket, argparse, and time are imported
 import socket
 import argparse
 import time
 
+#A function to encode the message is created
 def encodeMessage(m):
     M = m.encode()
     return M
 
+#
 parser = argparse.ArgumentParser()
 parser.add_argument('-a', '--address', type=str, default='10.0.5.69')
 parser.add_argument('-s', '--server', type=int, default=9000)
