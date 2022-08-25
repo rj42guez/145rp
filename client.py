@@ -16,7 +16,7 @@ args = parser.parse_args()
 
 iD = args.identifier
 portS = int(args.client)
-portR = int(args.sserver)
+portR = int(args.server)
 ipR = args.address
 
 student_id = iD
