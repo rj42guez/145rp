@@ -2,9 +2,9 @@ import socket               # socket is imported -> for establishing connections
 import argparse             # argparse is imported -> for command line input purposes
 import time                 # time is imported -> for making the program sleep for 120s
 
-def encodeContent(m):                   # A function to encode the content is created.
-    M = m.encode()
-    return M
+def encodeContent(c):                   # A function to encode the content is created.
+    C = c.encode()
+    return C
 
 # The next five lines are included so that the command line arguments can be parsed.
 parser = argparse.ArgumentParser()                                                  # parser is initialized as an ArgumentParser object
