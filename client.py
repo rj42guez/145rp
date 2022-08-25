@@ -7,10 +7,10 @@ def encodeMessage(m):
     return M
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-a', type=str, default="10.0.5.69")
+parser.add_argument('-a', type=str, default='10.0.5.69')
 parser.add_argument('-s', type=int, default=9000)
 parser.add_argument('-c', type=int, default=6734)
-parser.add_argument('-i', type=str, default="6d93e931")
+parser.add_argument('-i', type=str, default='6d93e931')
 
 args = parser.parse_args()
 
@@ -36,7 +36,6 @@ udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 M = encodeMessage(iM)
 udpSocket.bind(('', portS))
-udpSocket.settimeout(0.5)
 
 udpSocket.sendto(M, (ipR, portR))
 
