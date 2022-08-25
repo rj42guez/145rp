@@ -11,7 +11,7 @@ parser = argparse.ArgumentParser()                                              
 parser.add_argument('-a', '--address', type=str, default='10.0.5.69')               # An optional argument is added; this is for the IP address of the receiver.
 parser.add_argument('-s', '--server', type=int, default=9000)                       # An optional argument is added; this is for the port used by the receiver. 
 parser.add_argument('-c', '--client', type=int, default=6734)                       # An optional argument is added; this is for the port used by the sender.
-parser.add_argument('-i', '--identifier', type=str, default='6d93e931')             # An optional argument is added; this is for the unique ID assigneed per student.
+parser.add_argument('-i', '--identifier', type=str, default='6d93e931')             # An optional argument is added; this is for the unique ID assigned per student.
 
 args = parser.parse_args()              # The arguments are parsed via parse_args()         
 
