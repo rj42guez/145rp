@@ -1,5 +1,5 @@
 import socket               # socket is imported -> for establishing connections
-import argparse             # argparse is imported -> for input purposes
+import argparse             # argparse is imported -> for command line input purposes
 import time                 # time is imported -> for making the program sleep for 120s
 
 def encodeMessage(m):                   # A function to encode the message is created.
