@@ -2,7 +2,7 @@ import socket               # socket is imported -> for establishing connections
 import argparse             # argparse is imported -> for command line input purposes
 import time                 # time is imported -> for making the program sleep for 120s
 
-def encodeMessage(m):                   # A function to encode the message is created.
+def encodeContent(m):                   # A function to encode the content is created.
     M = m.encode()
     return M
 
@@ -37,7 +37,7 @@ print("Initiate Packet: ", iP)          # The initiate packet is printed as outp
 
 udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # A UDP connection is set up.
 
-M = encodeMessage(iP)                   # iP is encoded via encodeMessage(); the resulting value is stored in the variable M
+M = encodeContent(iP)                   # iP is encoded via encodeContent(); the resulting value is stored in the variable M
 udpSocket.bind(('', portS))             # The program listens from the sender port.
 
 udpSocket.sendto(M, (ipR, portR))       # The initiate packet is sent to the receiver.
