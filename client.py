@@ -31,7 +31,7 @@ uin_ans = '0'                           # uin_ans is initialized with '0'
 sep = '/'                               # sep is initialized with '/'
 data = '0'                              # data is initialized with '0'
 
-# iP is initialized with the concatenated values of the above strings
+# iP is initialized using the values of the above strings
 iP = '{}{}{}{}{}{}{}{}{}'.format(student_id, transaction_id, ty, pull_byte, pull_size, uin, uin_ans, sep, data)  
 print("Initiate Packet: ", iP)          # The initiate packet is printed as output.
 
