@@ -21,7 +21,7 @@ portR = int(args.server)                # The integer value of args.server is st
 ipR = args.address                      # The value of args.address is stored in ipR.
 
 # The next 9 lines are included so that the Initiate Packet can be created.
-student_id = iD                         # The value of iD is stored in student_id
+student_id = iD                         # The value of iD is stored in student_id.
 transaction_id = '99999999'             # transaction_id is initialized with '99999999'
 ty = '8'                                # ty is initialized with '8'
 pull_byte = '00000'                     # pull_byte is initialized with '00000'
