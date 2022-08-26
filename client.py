@@ -13,7 +13,7 @@ parser.add_argument('-s', '--server', type=int, default=9000)                   
 parser.add_argument('-c', '--client', type=int, default=6734)                       # An optional argument is added; this is for the port used by the sender.
 parser.add_argument('-i', '--identifier', type=str, default='6d93e931')             # An optional argument is added; this is for the unique ID assigned per student.
 
-args = parser.parse_args()              # The arguments are parsed via parse_args()         
+args = parser.parse_args()              # The arguments are parsed via parse_args().         
 
 iD = args.identifier                    # The value of args.identifier is stored in iD.
 portS = int(args.client)                # The integer value of args.client is stored in portS.
