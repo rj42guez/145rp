@@ -46,7 +46,7 @@ data, addr = udpSocket.recvfrom(1024)   # The program tries to receive from the 
 
 transID = data.decode()                 # The program decodes 'data' via decode() and stores the value in the variable transID.
 
-print("Transaction Number: ", transID)  # The transaction number is printed as output.
+print("Transaction ID: ", transID)  # The transaction ID is printed as output.
 
 print("Please wait until 120 seconds have passed.")     # The program then makes the user wait.
 time.sleep(120)                                         # The program then sleeps for 120 seconds.
